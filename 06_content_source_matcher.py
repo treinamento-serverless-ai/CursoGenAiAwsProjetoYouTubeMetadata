@@ -43,7 +43,7 @@ if not os.path.exists(table_path):
     print("Execute 05_videos_table.py primeiro")
     exit(1)
 
-df = pd.read_csv(table_path)
+df = pd.read_csv(table_path, dtype={'material_link': str, 'bibliography_references': str})
 print(f"Tabela carregada: {len(df)} vídeos\n")
 
 def normalize_text(text):
